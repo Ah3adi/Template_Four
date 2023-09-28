@@ -1086,6 +1086,12 @@ a {
 
 
 /* ----------------------------- */
+@media (max-width: 767px) {
+    .profile-page .other-data {
+      flex-direction: column;
+    }
+}
+
 .profile-page .other-data .my-skills {
     flex-grow: 1;
 }
@@ -1156,10 +1162,29 @@ a {
     margin-right: 10px;
 }
 
-.latest-activities .activity .date {
-    text-align: end;
-    margin-left: auto;
+@media (min-width: 768px) {
+    .profile-page .activity .date {
+      margin-left: auto;
+      text-align: right;
+    }
 }
+
+@media (max-width: 767px) {
+    .profile-page .activity {
+      flex-direction: column;
+    }
+
+    .profile-page .activity .date {
+        margin-top: 15px;
+    }
+
+    .profile-page .activity img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+}
+
 /* End Profile */
 
 /* Start Projects */
@@ -1167,8 +1192,13 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
 
-.projects-page .project {
-
+@media (max-width: 767px) {
+    .projects-page {
+      grid-template-columns: minmax(200px, 1fr);
+      margin-left: 10px;
+      margin-right: 10px;
+      gap: 10px;
+    }
 }
 
 .projects-page .project .date {
@@ -1179,7 +1209,7 @@ a {
 
 .projects-page .project .team {
     position: relative;
-    min-height: 80px;
+    min-height: 60px;
 }
 
 .projects-page .project .team a {
@@ -1226,9 +1256,22 @@ a {
     padding-top: 15px;
 }
 
+@media (max-width: 767px) {
+  .projects-page .project .do {
+    flex-direction: column;
+  }
+}
+
 .projects-page .project .do span {
     margin-left: 5px;
     padding: 3px 8px;
+    width: fit-content;
+}
+
+@media (max-width: 767px) {
+    .projects-page .project .do span:not(:last-child) {
+      margin-bottom: 10px;
+    }
 }
 
 .projects-page .project .info {
@@ -1236,6 +1279,7 @@ a {
     margin-top: 15px;
     padding-top: 15px;
 }
+
 
 .projects-page .project .info .prog {
     position: relative;
@@ -1258,6 +1302,16 @@ a {
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
+}
+
+@media (max-width: 767px) {
+    .projects-page .project .info {
+      flex-direction: column;
+    }
+
+    .projects-page .project .prog {
+        margin-bottom: 10px;
+      }
 }
 /* End Projects */
 
@@ -1307,6 +1361,77 @@ a {
     -o-transform: translateX(-50%);
 }
 /* End Courses */
+
+/* Start Friends */
+.friends-page {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@media (max-width: 767px) {
+    .friends-page {
+      grid-template-columns: minmax(200px, 1fr);
+      margin-left: 10px;
+      margin-right: 10px;
+      gap: 10px;
+    }
+}
+
+.friends-page .contact {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.friends-page .contact i {
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.3;
+    -webkit-transition: 0.3;
+    -moz-transition: 0.3;
+    -ms-transition: 0.3;
+    -o-transition: 0.3;
+}
+
+.friends-page .contact i:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.friends-page .friend .icons {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.friends-page .friend .icons i {
+    margin-right: 5px;
+}
+
+.friends-page .friend .icons .vip {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 40px;
+    opacity: 0.2;
+    cursor: default;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+/* End Friends */
 
 
 /* Start Animations */
