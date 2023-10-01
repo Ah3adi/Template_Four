@@ -194,6 +194,10 @@
   margin-top: 10px;
 }
 
+.mt-15 {
+  margin-top: 15px;
+}
+
 .mt-20 {
   margin-top: 20px;
 }
@@ -301,6 +305,10 @@
 
 .border-ccc {
   border: 1px solid #ccc;
+}
+
+.border-eee {
+  border: 1px solid #eee;
 }
 /* End Border */
 
